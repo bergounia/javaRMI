@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Formulaires pour tester le serveur Http simple</title>
+  </head>
+  <body>
+    <h1>Formulaires pour tester le serveur Http simple</h1>
+
+    <form method="get" action="http://localhost:8082/index.html">
+      <label>Nom</label><input type="text" name="nom"/>
+      <label>Prénom</label><input type="text" name="prenom"/>
+      <button>Valider en GET</button>
+    </form>
+
+    <form method="post" action="http://localhost:8080/index.html">
+      <label>Nom</label><input type="text" name="nom"/>
+      <label>Prénom</label><input type="text" name="prenom"/>
+      <button>Valider en POST</button>
+    </form>
+  </body>
+</html>
