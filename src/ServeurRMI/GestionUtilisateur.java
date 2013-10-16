@@ -44,6 +44,8 @@ public class GestionUtilisateur extends UnicastRemoteObject implements IGestionU
 		Element mdp= new Element("mdp");
 		utilisateur.addContent(mdp);
 		mdp.setText(GestionUtilisateur.encode(mdpm));
+		
+		enregistre("utilisateurs.xml");
 	}
 	
 	public static void supprimerUtilisateur(String id)
