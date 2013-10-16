@@ -4,6 +4,7 @@ import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.NotBoundException;
 import java.net.MalformedURLException;
+import ServeurRMI.IUtilisateur;
 
 /**
  * Client permettant d'interroger la personne sur le serveur distant.
@@ -17,11 +18,11 @@ public class ClientRMI {
      * @param args inutilise
      */
     public static void main(String[] args) {
-	IPersonneDistante personne = null;
+	IUtilisateur u = null;
 
 	// Recuperation de la personne distante
 	try {
-	    personne = (IPersonneDistante)Naming.lookup("rmi://localhost/CyrilRabat");
+	    u = (IUtilisateur)Naming.lookup("rmi://localhost/CyrilRabat");
 	} catch(NotBoundException e) {
 	    System.err.println("Pas possible d'acceder à l'objet distant : " + e);
 	    System.exit(-1);
