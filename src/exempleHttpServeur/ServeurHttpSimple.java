@@ -16,7 +16,7 @@ public class ServeurHttpSimple {
     public static void main(String[] args) {	
 	HttpServer serveur = null;
 	try {
-	   serveur = HttpServer.create(new InetSocketAddress(8082), 0);
+	   serveur = HttpServer.create(new InetSocketAddress(8081), 0);
 	} catch(IOException e) {
 	    System.err.println("Erreur lors de la creation du serveur " + e);
 	    System.exit(-1);
