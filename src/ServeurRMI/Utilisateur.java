@@ -5,7 +5,7 @@ import java.rmi.server.UnicastRemoteObject;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class Utilisateur extends UnicastRemoteObject {
+public class Utilisateur extends UnicastRemoteObject implements IUtilisateur{
 
 	private String id;
 	private String nom;
