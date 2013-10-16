@@ -8,10 +8,10 @@ public class ServeurRmi{
 	public static void main(String[] args) {
 		try {
 			// Creation de la personne
-			Utilisateur u = new Utilisateur("Cyril", "Rabat", "rabat001");
+			GestionUtilisateur gu = new GestionUtilisateur();
 	
 			// Enregistrement sur le Registry
-			Naming.rebind("CyrilRabat", u);
+			Naming.rebind("GestionUtilisateur", gu);
 		} catch(RemoteException e) {
 			System.err.println("Erreur lors de l'enregistrement : " + e);
 			System.exit(-1);

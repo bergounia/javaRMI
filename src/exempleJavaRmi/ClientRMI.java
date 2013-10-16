@@ -35,7 +35,7 @@ public class ClientRMI {
 	}
 
 	try {
-	    System.out.println("Personne : " + personne.getPrenom() + " " + personne.getNom());
+	    System.out.println("Personne : " + u.getPrenom() + " " + u.getNom());
 	} catch(RemoteException e) {
 	    System.err.println("Erreur lors de l'acces aux methodes : " + e);
 	    System.exit(-1);
