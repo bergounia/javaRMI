@@ -5,7 +5,6 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.input.SAXBuilder;
@@ -36,6 +35,7 @@ public class Forum {
 	public void creerMessage(String auteur,String corps){
 		listeMessages.add(new Message(incrIdMessage, auteur, corps));
 		majIncre();
+		
 	}
 
 	public synchronized static void majIncre(){
@@ -78,7 +78,7 @@ public class Forum {
 			Element auteur= new Element("auteur");
 			Element corps= new Element("corps");
 
-			idM.setText(String.valueOf(this.id));
+			idM.setText(String.valueOf(m.getId()));
 			auteur.setText(m.getAuteur());
 			corps.setText(m.getCorps());
 
@@ -150,7 +150,6 @@ public class Forum {
 	public void setListeMessages(ArrayList<Message> listeMessages) {
 		this.listeMessages = listeMessages;
 	}
-	
 	
 
 	@Override
