@@ -48,7 +48,7 @@ public class GestionUtilisateur extends UnicastRemoteObject implements IGestionU
 		enregistre("utilisateurs.xml");
 	}
 	
-	public static void supprimerUtilisateur(String id)
+	public void supprimerUtilisateur(String id) throws RemoteException
 	{
 		int i=0;
 		boolean b= false;
@@ -69,7 +69,7 @@ public class GestionUtilisateur extends UnicastRemoteObject implements IGestionU
 		racine.removeContent(i);
 	}
 	
-	public static boolean chercherUtilisateur(Utilisateur u) throws RemoteException
+	public boolean chercherUtilisateur(String identifiant, String motDePasse) throws RemoteException
 	{
 		boolean b= false;
 		
@@ -77,11 +77,11 @@ public class GestionUtilisateur extends UnicastRemoteObject implements IGestionU
 		
 		Iterator<Element> it = listeUtilisateurs.iterator();
 		
-		while(it.hasNext() && !b)
+		while(!b && it.hasNext())
 		{
 			Element courant = it.next();
 			
-			if(u.getId().equals(courant.getChild("id").getText()) & u.getMdp().equals(courant.getChild("mdp").getText()) )
+			if(courant.getChild("id").getText().equals(identifiant) & courant.getChild("mdp").getText().equals(encode(motDePasse)) )
 				b= true;
 		}
 		
