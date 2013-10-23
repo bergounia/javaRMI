@@ -9,7 +9,7 @@ public class ServeurRmi{
 		try {
 			// Creation de la personne
 			GestionUtilisateur gu = new GestionUtilisateur();
-	
+			
 			// Enregistrement sur le Registry
 			Naming.rebind("GestionUtilisateur", gu);
 		} catch(RemoteException e) {
