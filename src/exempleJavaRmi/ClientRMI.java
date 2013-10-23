@@ -1,11 +1,11 @@
 package exempleJavaRmi;
-
+/*
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.NotBoundException;
 import java.net.MalformedURLException;
 import ServeurRMI.IUtilisateur;
-
+*/
 /**
  * Client permettant d'interroger la personne sur le serveur distant.
  * @author Cyril Rabat
@@ -16,7 +16,7 @@ public class ClientRMI {
     /**
      * Methode principale.
      * @param args inutilise
-     */
+     *//*
     public static void main(String[] args) {
 	IUtilisateur u = null;
 
@@ -41,5 +41,5 @@ public class ClientRMI {
 	    System.exit(-1);
 	}
     }
-
+*/
 }

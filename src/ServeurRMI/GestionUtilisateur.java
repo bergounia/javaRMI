@@ -69,7 +69,7 @@ public class GestionUtilisateur extends UnicastRemoteObject implements IGestionU
 		racine.removeContent(i);
 	}
 	
-	public boolean chercherUtilisateur(String identifiant, String motDePasse) throws RemoteException
+	public boolean chercherUtilisateur(String identifiant) throws RemoteException
 	{
 		boolean b= false;
 		
@@ -81,7 +81,7 @@ public class GestionUtilisateur extends UnicastRemoteObject implements IGestionU
 		{
 			Element courant = it.next();
 			
-			if(courant.getChild("id").getText().equals(identifiant) & courant.getChild("mdp").getText().equals(encode(motDePasse)) )
+			if(courant.getChild("id").getText().equals(identifiant))
 				b= true;
 		}
 		

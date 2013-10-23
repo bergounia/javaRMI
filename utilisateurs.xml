@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <utilisateurs>
   <utilisateur>
-    <id>benkam0</id>
-    <nom>benjamin</nom>
-    <prenom>kaminski</prenom>
+    <id>KamBen0</id>
+    <nom>Kaminski</nom>
+    <prenom>Benjamin</prenom>
     <mdp>721a9b52bfceacc503c056e3b9b93cfa</mdp>
+  </utilisateur>
+  <utilisateur>
+    <id>BriAym1</id>
+    <nom>Bride</nom>
+    <prenom>Aymeric</prenom>
+    <mdp>af4fef1bc0861ca2824db7315f844327</mdp>
+  </utilisateur>
+  <utilisateur>
+    <id>RabCyr2</id>
+    <nom>Rabat</nom>
+    <prenom>Cyril</prenom>
+    <mdp>f02368945726d5fc2a14eb576f7276c0</mdp>
   </utilisateur>
 </utilisateurs>

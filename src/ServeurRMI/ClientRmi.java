@@ -26,7 +26,11 @@ public class ClientRmi {
 
 		try {
 			//System.out.println("Personne : " + personne.getPrenom() + " " + personne.getNom());
-			gestion.ajouterUtilisateur("benjamin", "kaminski", "coucou");
+			gestion.ajouterUtilisateur("Kaminski", "Benjamin", "coucou");
+			gestion.ajouterUtilisateur("Bride", "Aymeric", "Salut");
+			gestion.ajouterUtilisateur("Rabat", "Cyril", "bonjour");
+			System.out.println(gestion.chercherUtilisateur("BriAym1"));
+			gestion.supprimerUtilisateur("KamBen0");
 		} catch(RemoteException e) {
 			System.err.println("Erreur lors de l'acces aux methodes : " + e);
 			System.exit(-1);
